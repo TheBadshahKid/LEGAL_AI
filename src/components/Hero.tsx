@@ -88,7 +88,7 @@ export default function Hero() {
 
                         <motion.p
                             variants={fadeUp}
-                            className="text-[13px] md:text-[14px] text-[#9EA0C1]/80 dark:text-[#7A7A9A] leading-[1.7] max-w-[340px]"
+                            className="text-[13px] md:text-[14px] text-[#4F5BFF]/70 dark:text-[#6B7AFF]/70 leading-[1.7] max-w-[340px]"
                         >
                             Track matters, coordinate schedules, manage clients,
                             centralize documents, and handle communication –
