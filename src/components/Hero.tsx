@@ -61,7 +61,7 @@ export default function Hero() {
                         initial="hidden"
                         animate="visible"
                         variants={stagger}
-                        className="max-w-[460px] py-20 z-10"
+                        className="max-w-[540px] py-20 z-10"
                     >
                         <motion.h1
                             variants={fadeUp}
@@ -71,7 +71,7 @@ export default function Hero() {
                                 A single platform to
                             </span>
                             <br />
-                            <span className="text-[#9EA0C1] dark:text-[#6B6B8D] font-medium">
+                            <span className="text-[#9EA0C1] dark:text-[#6B6B8D] font-semibold">
                                 manage
                             </span>{" "}
                             <span className="text-[#9EA0C1] dark:text-[#6B6B8D]">
