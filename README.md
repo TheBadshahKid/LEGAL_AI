@@ -1,3 +1,4 @@
+https://legal-ai-kohl.vercel.app/
 # Round-1-Task
 Assignment: "The Floating Hero Section"
 Objective Replicate the "Legal Work Platform" hero section shown in the design screenshot as closely as possible using Next.js.
