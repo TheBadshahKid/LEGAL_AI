@@ -33,10 +33,11 @@ export default function FloatingCard({
     variant = "default",
     portalData,
 }: FloatingCardProps) {
+    /* Muted, softer color palette */
     const colorMap = {
-        blue: "bg-[#4F5BFF] text-white",
-        orange: "bg-[#E8873B] text-white",
-        dark: "bg-[#2B213A] dark:bg-[#1E1530] text-white",
+        blue: "bg-[#5C6AFF] text-white",
+        orange: "bg-[#E08A42] text-white",
+        dark: "bg-[#302545] dark:bg-[#1E1530] text-white",
     };
 
     /* ── Portal variant (John Doe card) ── */
@@ -44,31 +45,32 @@ export default function FloatingCard({
         return (
             <div
                 className={cn(
-                    "p-3.5 pr-8 rounded-[20px] shadow-lg flex items-start gap-2.5 w-[280px]",
-                    "bg-[#C5C9E8]/60 dark:bg-[#2A2540]/80 backdrop-blur-sm",
+                    "p-3 pr-6 rounded-[18px] flex items-start gap-2.5 w-[260px]",
+                    "bg-[#D5D8EC]/50 dark:bg-[#2A2540]/60 backdrop-blur-sm",
+                    "shadow-[0_8px_32px_rgba(0,0,0,0.06)]",
                     rotation,
                     className
                 )}
             >
                 {/* Orange accent bar */}
-                <div className="w-[3px] h-10 bg-orange-400 rounded-full mt-1 shrink-0" />
+                <div className="w-[3px] h-9 bg-[#E08A42] rounded-full mt-1 shrink-0" />
 
                 {/* Avatar */}
                 <img
                     src={portalData.avatar}
                     alt={portalData.name}
-                    className="w-9 h-9 rounded-full object-cover mt-0.5 shrink-0"
+                    className="w-8 h-8 rounded-full object-cover mt-0.5 shrink-0"
                 />
 
                 {/* Text content */}
                 <div className="flex-1 min-w-0">
-                    <h4 className="font-bold text-[13px] text-[#2B213A] dark:text-white leading-tight">
+                    <h4 className="font-semibold text-[12px] text-[#2B213A] dark:text-white leading-tight">
                         {portalData.name}
                     </h4>
-                    <p className="text-[10px] text-[#2B213A]/70 dark:text-white/60 leading-tight mt-0.5">
+                    <p className="text-[9.5px] text-[#2B213A]/55 dark:text-white/50 leading-snug mt-0.5">
                         {portalData.message}
                     </p>
-                    <p className="text-[9px] text-blue-600 dark:text-blue-400 font-semibold mt-1">
+                    <p className="text-[8.5px] text-[#5C6AFF] dark:text-blue-400 font-semibold mt-1">
                         {portalData.id} · {portalData.time}
                     </p>
                 </div>
@@ -80,7 +82,9 @@ export default function FloatingCard({
     return (
         <div
             className={cn(
-                "py-4 rounded-full shadow-xl flex items-center justify-center gap-3 transition-colors duration-300",
+                "py-3.5 rounded-full flex items-center justify-center gap-2.5",
+                "shadow-[0_8px_32px_rgba(0,0,0,0.08)]",
+                "transition-colors duration-300",
                 colorMap[color],
                 rotation,
                 className
@@ -89,12 +93,13 @@ export default function FloatingCard({
             {Icon && (
                 <Icon
                     className={cn(
-                        "w-5 h-5 shrink-0",
-                        color === "dark" ? "text-orange-400" : "text-white"
+                        "w-[18px] h-[18px] shrink-0",
+                        color === "dark" ? "text-[#E08A42]" : "text-white/90"
                     )}
+                    strokeWidth={2.2}
                 />
             )}
-            <span className="text-lg font-bold tracking-tight whitespace-nowrap">
+            <span className="text-[15px] font-semibold tracking-tight whitespace-nowrap">
                 {label}
             </span>
         </div>
