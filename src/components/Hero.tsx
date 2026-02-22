@@ -50,87 +50,98 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-[#ECEEF6] dark:bg-[#0f1221]">
             <BackgroundBlobs />
             <ThemeToggle />
 
-            <div className="w-full max-w-[1400px] mx-auto px-8 md:px-16 relative z-10">
-                <div className="grid lg:grid-cols-[1fr_1fr] gap-8 items-center">
+            <div className="w-full max-w-[1440px] mx-auto px-10 md:px-20 relative z-10">
+                <div className="grid lg:grid-cols-[1.1fr_1fr] gap-4 items-center">
 
                     {/* ───── LEFT: Typography ───── */}
                     <motion.div
                         initial="hidden"
                         animate="visible"
                         variants={stagger}
-                        className="max-w-[560px] py-16"
+                        className="max-w-[520px] py-16"
                     >
                         <motion.h1
                             variants={fadeUp}
-                            className="text-[52px] md:text-[72px] lg:text-[80px] font-semibold leading-[1.05] tracking-[-0.02em] mb-8"
+                            className="text-[48px] md:text-[64px] lg:text-[72px] font-light leading-[1.08] tracking-[-0.01em] mb-8"
                         >
-                            <span className="text-[#9A9ABF] dark:text-[#6B6B8D]">A single platform to</span>
+                            <span className="text-[#9A9ABF] dark:text-[#6B6B8D]">
+                                A single platform to
+                            </span>
                             <br />
-                            <span className="text-[#2B213A] dark:text-white font-bold">manage</span>{" "}
-                            <span className="text-[#9A9ABF] dark:text-[#6B6B8D]">every part of</span>
+                            <span className="text-[#9A9ABF] dark:text-[#6B6B8D] font-bold">
+                                manage
+                            </span>{" "}
+                            <span className="text-[#9A9ABF] dark:text-[#6B6B8D]">
+                                every part of
+                            </span>
                             <br />
-                            <span className="text-[#9A9ABF] dark:text-[#6B6B8D]">your </span>
-                            <span className="text-[#4F5BFF] dark:text-[#6B7AFF] font-bold">legal work</span>
+                            <span className="text-[#9A9ABF] dark:text-[#6B6B8D]">
+                                your{" "}
+                            </span>
+                            <span className="text-[#4F5BFF] dark:text-[#6B7AFF] font-bold">
+                                legal work
+                            </span>
                         </motion.h1>
 
                         <motion.p
                             variants={fadeUp}
-                            className="text-[15px] md:text-[17px] text-[#8A8AA3] dark:text-[#7A7A9A] leading-relaxed max-w-[420px]"
+                            className="text-[14px] md:text-[16px] text-[#8A8AA3] dark:text-[#7A7A9A] leading-relaxed max-w-[380px]"
                         >
-                            Track matters, coordinate schedules, manage clients, centralize
-                            documents, and handle communication – all in one system.
+                            Track matters, coordinate schedules, manage clients,
+                            centralize documents, and handle communication –
+                            all in one system.
                         </motion.p>
                     </motion.div>
 
                     {/* ───── RIGHT: Floating Cards ───── */}
-                    <div className="relative h-[550px] w-full hidden md:block">
+                    <div className="relative h-[520px] w-full hidden md:block">
 
-                        {/* Billing — top area, angled */}
+                        {/* Billing — upper center-right, angled */}
                         <motion.div
                             {...slideIn("right", 0.2)}
-                            className="absolute top-[8%] left-[15%]"
+                            className="absolute top-[12%] left-[20%]"
                         >
                             <motion.div animate={float(0)} whileHover={{ scale: 1.05 }}>
                                 <FloatingCard
                                     label="Billing"
                                     icon={Receipt}
                                     color="blue"
-                                    rotation="-rotate-[15deg]"
-                                    className="px-8 py-4"
+                                    rotation="-rotate-[12deg]"
+                                    className="px-10 py-4 min-w-[220px]"
                                 />
                             </motion.div>
                         </motion.div>
 
-                        {/* Matters — middle-left area */}
+                        {/* Matters — middle-left */}
                         <motion.div
                             {...slideIn("left", 0.4)}
-                            className="absolute top-[38%] left-[-12%]"
+                            className="absolute top-[42%] left-[-8%]"
                         >
                             <motion.div animate={float(0.8)} whileHover={{ scale: 1.05 }}>
                                 <FloatingCard
                                     label="Matters"
                                     icon={Gavel}
                                     color="orange"
-                                    rotation="-rotate-[15deg]"
-                                    className="px-7 py-3.5"
+                                    rotation="-rotate-[12deg]"
+                                    className="px-8 py-3.5 min-w-[190px]"
                                 />
                             </motion.div>
                         </motion.div>
 
-                        {/* John Doe Portal — center */}
+                        {/* John Doe Portal — center-right */}
                         <motion.div
                             {...slideIn("up", 0.6)}
-                            className="absolute top-[42%] left-[30%]"
+                            className="absolute top-[40%] left-[35%]"
                         >
                             <motion.div animate={float(1.2)} whileHover={{ scale: 1.03 }}>
                                 <FloatingCard
                                     label=""
                                     variant="portal"
-                                    rotation="-rotate-[8deg]"
+                                    rotation="-rotate-[5deg]"
                                     portalData={{
                                         name: "John Doe - Portal",
                                         message:
@@ -144,34 +155,34 @@ export default function Hero() {
                             </motion.div>
                         </motion.div>
 
-                        {/* Tasks — bottom-center */}
+                        {/* Tasks — bottom-center-left */}
                         <motion.div
                             {...slideIn("down", 0.8)}
-                            className="absolute bottom-[8%] left-[8%]"
+                            className="absolute bottom-[8%] left-[10%]"
                         >
                             <motion.div animate={float(1.6)} whileHover={{ scale: 1.05 }}>
                                 <FloatingCard
                                     label="Tasks"
                                     icon={CheckSquare}
                                     color="dark"
-                                    rotation="-rotate-[8deg]"
-                                    className="px-10 py-4"
+                                    rotation="-rotate-[6deg]"
+                                    className="px-12 py-4 min-w-[240px]"
                                 />
                             </motion.div>
                         </motion.div>
 
-                        {/* Documents — bottom-right */}
+                        {/* Documents — bottom-right, partially off-screen */}
                         <motion.div
                             {...slideIn("right", 1.0)}
-                            className="absolute bottom-[2%] right-[-8%]"
+                            className="absolute bottom-[4%] right-[-12%]"
                         >
                             <motion.div animate={float(0.4)} whileHover={{ scale: 1.05 }}>
                                 <FloatingCard
                                     label="Documents"
                                     icon={FileText}
                                     color="dark"
-                                    rotation="-rotate-[8deg]"
-                                    className="px-8 py-4"
+                                    rotation="-rotate-[6deg]"
+                                    className="px-10 py-4 min-w-[240px]"
                                 />
                             </motion.div>
                         </motion.div>

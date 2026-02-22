@@ -44,7 +44,7 @@ export default function FloatingCard({
         return (
             <div
                 className={cn(
-                    "p-3 pr-6 rounded-[22px] shadow-lg flex items-start gap-2.5 w-[280px]",
+                    "p-3.5 pr-8 rounded-[20px] shadow-lg flex items-start gap-2.5 w-[280px]",
                     "bg-[#C5C9E8]/60 dark:bg-[#2A2540]/80 backdrop-blur-sm",
                     rotation,
                     className
@@ -80,7 +80,7 @@ export default function FloatingCard({
     return (
         <div
             className={cn(
-                "px-7 py-4 rounded-full shadow-xl flex items-center gap-3 transition-colors duration-300",
+                "py-4 rounded-full shadow-xl flex items-center justify-center gap-3 transition-colors duration-300",
                 colorMap[color],
                 rotation,
                 className
@@ -89,12 +89,12 @@ export default function FloatingCard({
             {Icon && (
                 <Icon
                     className={cn(
-                        "w-6 h-6 shrink-0",
+                        "w-5 h-5 shrink-0",
                         color === "dark" ? "text-orange-400" : "text-white"
                     )}
                 />
             )}
-            <span className="text-xl font-bold tracking-tight whitespace-nowrap">
+            <span className="text-lg font-bold tracking-tight whitespace-nowrap">
                 {label}
             </span>
         </div>
